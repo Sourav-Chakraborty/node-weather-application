@@ -77,7 +77,7 @@ app.get('/help',(req,res)=>{
        name:"Sourav"
     })
  })
- app.get('*',(req,res)=>{
+ app.use((req,res)=>{
    res.render('error',{
       message:"Page doen't exists",
       name:"Sourav"
