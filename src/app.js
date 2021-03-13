@@ -5,7 +5,7 @@ const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
 const { error } = require('console')
 
-
+const port=process.env.PORT || 3000
 const app=express()
 // console.log(__dirname)
 // console.log(path.join(__dirname,'../source'))
@@ -83,6 +83,6 @@ app.get('/help',(req,res)=>{
       name:"Sourav"
    })
  })
-app.listen(3000,()=>{
-    console.log("Server is up on port 3000")
+app.listen(port,()=>{
+    console.log("Server is up on port ",port)
 })
